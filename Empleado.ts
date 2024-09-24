@@ -14,4 +14,8 @@ class Empleado extends Persona{
         console.log("Hoy trabajo : " + hrTrabajo + "horas ");
     }
 
+    saludar(): void {
+        console.log(`Empleado: Hola ${this.nombre}, tu edad es ${this.getEdad()} y el salario es de ${this.salario}`);
+    }
+
 }
