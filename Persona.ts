@@ -1,12 +1,16 @@
+import { Direccion } from "./Direccion";
+
 export class Persona {
     
     nombre: string = "";
     private edad: number = 0;
+    direccion: Direccion | undefined ;
     
 
-    constructor(nombre : string , edad : number)  {
-        this.nombre = nombre
-        this.edad= edad
+    constructor(nombre : string , edad : number , direccion : Direccion)  {
+        this.nombre = nombre;
+        this.edad= edad;
+        this.direccion=direccion;
     }
     
     getEdad(): number {
@@ -15,7 +19,10 @@ export class Persona {
     
     
     saludar(): void{
-        console.log(`Tu nombre es : ${this.nombre}  y tiene : ${this.edad} años`);
+        console.log("\nMi nombre es : " + this.nombre +  " \nEdad es  : " + this.getEdad() +  " años" );
+        console.log("La direccion es : " );
+        console.log(this.direccion);
+        console.log("_____________________________");
     }   
     
 }

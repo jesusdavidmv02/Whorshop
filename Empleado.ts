@@ -1,11 +1,12 @@
+import { Direccion } from "./Direccion";
 import { Persona } from "./Persona";
 
 export class Empleado extends Persona{
     
     salario : number = 0; 
 
-    constructor(nombre:string, edad : number , salario : number) {
-        super(nombre, edad);
+    constructor(nombre:string, edad : number  , direccion : Direccion,   salario : number) {
+        super(nombre, edad ,direccion);
         this.salario = salario;        
     }
 
@@ -15,7 +16,14 @@ export class Empleado extends Persona{
     }
 
   saludar(): string {
-    return `Empleado: Hola ${this.nombre}, tu edad es ${this.getEdad()} y el salario es de ${this.salario}.`;
+    const direc = JSON.stringify(this.direccion) 
+    
+    let mensaje = "Empleado : Hola  " + this.nombre + "\n" ;
+    mensaje += "Tu edad es : " + this.getEdad()  + "\n" ;
+    mensaje += "El salario es : " + this.salario +  "\n";
+    mensaje += "La dirrecion es  : " + direc.replace(/["{}\[\]]/g, ' ');
+
+    return mensaje;
   }
-  
+
 }
