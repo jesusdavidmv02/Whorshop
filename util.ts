@@ -3,7 +3,7 @@ import { Persona } from "./Persona";
 
 export const JsonPersona = (JSON : {nombre : string, edad : number, direccion : {calle:string , ciudad :string, pais: string}})  =>  {
 
-    const persona = new Persona(JSON.nombre, JSON.edad ,  JSON.direccion);
+    const persona = new Persona(JSON.nombre, JSON.edad ,  JSON.direccion );
     persona.saludar();
 
 };
