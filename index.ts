@@ -2,11 +2,6 @@ import { Persona } from "./Persona";
 import { Empleado } from "./Empleado";
 import { Direccion } from "./Direccion";
 
-
-
-
-
-
 // la clase persona 
 const persona : Persona [] = [
     new Persona("Jesus David",24, {calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" }, []  ),
@@ -42,4 +37,5 @@ empleado.forEach((empleado) => {
     console.log(empleado.saludar());
     console.log("_______________________");
 });
+
 
