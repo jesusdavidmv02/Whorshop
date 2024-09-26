@@ -13,6 +13,7 @@ export class Persona {
         this.direccion=direccion;
     }
     
+
     getEdad(): number {
         return this.edad;
     }
