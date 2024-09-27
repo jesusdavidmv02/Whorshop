@@ -3,6 +3,7 @@ import { Empleado } from "./Empleado";
 import { Direccion } from "./Direccion";
 import { EstadoCivil } from "./EstadoCivil";
 import { Empresa } from "./Empresa";
+import { Proyecto } from "./Proyecto";
 
 // la clase persona 
 const persona : Persona [] = [
@@ -18,7 +19,7 @@ const persona : Persona [] = [
     new Persona("Karen",45 ,  {calle: "L 1 # 38 " , ciudad : "Cartagena" , pais : "Estado Unidos"} ,  EstadoCivil.DIVORCIADO  ,[])
 ];
 
-console.log(" \n \n \n ____________________Imprime persona __________________")
+console.log(" \n \n____________________Imprime persona __________________")
 persona.forEach((persona) => persona.saludar());
  
 // la clase empleado 
@@ -35,15 +36,12 @@ persona.forEach((persona) => persona.saludar());
     new Empleado("Karen",45 ,  {calle: "L 1 # 38 " , ciudad : "Cartagena" , pais : "Estado Unidos"} , 2000000)
  ];
 
-
-
 console.log("\n \n \n__________________Imprime Empleado _____________________\n ");
 for (let i = 0; i < empleado.length; i++) {
     console.log(empleado[i].saludar());
     console.log("_______________________");
     console.log(" ")
 }
-
 
 //  Punto 15  Empresa que tenga la lista de empleado 
 const empresa = new Empresa ();
@@ -53,7 +51,6 @@ empresa.addEmpleado(empleado_01);
 for (let i = 6 ; i < empleado.length; i++) { // va  a recorer el array desde la [6] en adelante  
     empresa.addEmpleado(empleado[i]);
 }
-
 
 console.log("\n \n__________________Imprime los metodos de la clase Empresa _________________\n \n ");
 empresa.listarEmpleado(); // imprime la lista de empleado 
@@ -85,7 +82,18 @@ console.log("\nlos datos a eliminar son :  \n"  +
 
     console.log("\n \n ___Total de la nueva nominada __________\n ");
     empresa.totalSalario(); // imprime el total de la nomina de la empresa 
-    console.log("\n \n  ");
+    console.log("");
 
+    //La clase proyecto   
 
+    console.log("\n_______________clase Proyecto _____________")
+
+   const proyecto_01 = new Proyecto("Aplicaciones Moviles  ", [empleado_01] ); // -> proyecto externo 
+   const proyecto_02 = new Proyecto("Desarrollo - Back End", [ empleado[2], empleado[3] , empleado[8] ]) ;
+    
+   proyecto_01.verProyecto();
+   console.log("_____________________________");
+   proyecto_02.verProyecto();
+
+   console.log("\n \n");
 

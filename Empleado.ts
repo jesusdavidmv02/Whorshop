@@ -1,13 +1,14 @@
 import { Direccion } from "./Direccion";
 import { Persona } from "./Persona";
+import { Proyecto } from "./Proyecto";
 
 export class Empleado extends Persona{
     
     salario : number = 0; 
 
-    constructor(nombre:string, edad : number  , direccion : Direccion,   salario : number) {
+    constructor(nombre:string, edad : number, direccion : Direccion, salario : number )  {
         super(nombre, edad ,direccion);
-        this.salario = salario;        
+        this.salario = salario;     
     }
 
     trabajar(){
