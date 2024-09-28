@@ -4,6 +4,7 @@ import { Direccion } from "./Direccion";
 import { EstadoCivil } from "./EstadoCivil";
 import { Empresa } from "./Empresa";
 import { Proyecto } from "./Proyecto";
+import { Departamento } from "./Departemento";
 
 // la clase persona 
 const persona : Persona [] = [
@@ -19,7 +20,7 @@ const persona : Persona [] = [
     new Persona("Karen",45 ,  {calle: "L 1 # 38 " , ciudad : "Cartagena" , pais : "Estado Unidos"} ,  EstadoCivil.DIVORCIADO  ,[])
 ];
 
-console.log(" \n \n____________________Imprime persona __________________")
+console.log("\n \n____________________Imprime persona __________________")
 persona.forEach((persona) => persona.saludar());
  
 // la clase empleado 
@@ -84,9 +85,9 @@ console.log("\nlos datos a eliminar son :  \n"  +
     empresa.totalSalario(); // imprime el total de la nomina de la empresa 
     console.log("");
 
-    //La clase proyecto   
 
-    console.log("\n_______________clase Proyecto _____________")
+    //La clase proyecto   
+   console.log("\n_______________clase Proyecto _____________")
 
    const proyecto_01 = new Proyecto("Aplicaciones Moviles  ", [empleado_01] ); // -> proyecto externo 
    const proyecto_02 = new Proyecto("Desarrollo - Back End", [ empleado[2], empleado[3] , empleado[8] ]) ;
@@ -95,5 +96,49 @@ console.log("\nlos datos a eliminar son :  \n"  +
    console.log("_____________________________");
    proyecto_02.verProyecto();
 
-   console.log("\n \n");
+   console.log("\n");
 
+
+        //  Punto 17 clase depatamento
+        const departamento = new Departamento ("Departamento de Finanzas");
+        departamento.addEmpleadoDpto(empleado_01);
+            for (let i = 5 ; i < empleado.length; i++) {
+                departamento.addEmpleadoDpto(empleado[i]);            
+            }
+        departamento.listarEmpleadoDpto();
+
+         console.log("_______________________________________\n ")
+
+        const departamento_02 = new Departamento ("Departamento IT");
+            for (let i = 0 ; i < empleado.length; i++) {
+                departamento_02.addEmpleadoDpto(empleado[i]);            
+            }
+        departamento_02.listarEmpleadoDpto();
+
+
+        // Prueba de eliminar datos del departamento 
+
+        const datoDeleteDPto = "Karen---"; 
+        const datoDeleteDPto_01 = "Rosa----"; 
+        const datoDeleteDPto_02 = "Eliecer------"; 
+        const datoDeleteDPto_03 = "Kevin-------"; 
+
+        console.log("\nlos datos a eliminar son :  \n"  +  
+                "1 : " + datoDeleteDPto     + " \n"  +
+                "2 : " + datoDeleteDPto_01  + " \n"  +
+                "3 : " + datoDeleteDPto_02  + " \n"  +
+                "4 : " + datoDeleteDPto_03  + " \n"     );
+
+        const RDpto1 = departamento_02.deleteEmpleadoDpto(datoDeleteDPto);    // elimina un empleado de la clase --> Departamento 
+        const RDpto2 = departamento_02.deleteEmpleadoDpto(datoDeleteDPto_01); // elimina un empleado de la clase --> Departamento 
+        const RDpto3 = departamento_02.deleteEmpleadoDpto(datoDeleteDPto_02); // elimina un empleado de la clase --> Departamento 
+        const RDpto4 = departamento_02.deleteEmpleadoDpto(datoDeleteDPto_03); // elimina un empleado de la clase --> Departamento }
+
+        if (RDpto1 || RDpto2 || RDpto3 || RDpto4) {
+            departamento_02.listarEmpleadoDpto();  // -> solo va a imprimir el JD -> El empleado exteno del array  
+        } else {
+            console.log("########  [Niguno de los datos a eliminar estan en el : ] - [ " + departamento_02.name + " ] ##################");
+        }
+
+        console.log("\n");
+        console.log("\n");
