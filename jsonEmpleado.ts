@@ -27,53 +27,53 @@ const jsonEmpleado = [
         salario :  10000  
     } ,
     { 
-        nombre :  "Emilio --- empleado json",
+        nombre :  "Emilio",
         edad : 2, 
         direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
         salario :  10000
     } ,
     { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Kevin",
         edad : 3, 
         direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
         salario :  10000
     } ,
 
     { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Keiner",
         edad : 4, 
         direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
         salario :  10000
     } ,    { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Rosa",
         edad : 5, 
-        direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
+        direccion : {  calle : "101 a #30-90", ciudad : "Orlado", pais : "Estados Unido" },
         salario :  10000
     } ,    { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Ketty",
         edad : 6, 
-        direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
+        direccion : {  calle : "101 a #30-90", ciudad : "Caraca", pais : "Venezuela" },
         salario :  10000
     } ,    { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Maria",
         edad : 7, 
-        direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
+        direccion : {  calle : "101 a #30-90", ciudad : "cali", pais : "Colombia" },
         salario :  10000
     } ,    { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Camila",
         edad : 8, 
-        direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
+        direccion : {  calle : "101 a #30-90", ciudad : "Barraquilla", pais : "Colombia" },
         salario :  10000
     },
     { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Rafael",
         edad : 9, 
-        direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
+        direccion : {  calle : "101 a #30-90", ciudad : "Medellin", pais : "Colombia" },
         salario :  10000
     } ,    { 
-        nombre :  "Wendy --- empleado json",
+        nombre :  "Wendy",
         edad : 10, 
-        direccion : {  calle : "101 a #30-90", ciudad : "Cartagena", pais : "Colombia" },
+        direccion : {  calle : "101 a #30-90", ciudad : "Medellin", pais : "Colombia" },
         salario :  10000
     } 
 ];
